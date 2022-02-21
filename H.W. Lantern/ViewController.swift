@@ -8,12 +8,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var button: UIButton!
+    
+    var lightOnOf = true
+    var count = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        buttonPressed()
     }
-
-
+    
+    @IBAction func buttonPressed() {
+        lightOnOf.toggle()
+        switch count {
+        case 0: view.backgroundColor = .red
+        case 1: view.backgroundColor = .yellow
+        case 2: view.backgroundColor = .green
+        default: break
+        }
+        count += 1
+        if count > 2 {
+            count = 0
+        }
+    }
+    
 }
 
