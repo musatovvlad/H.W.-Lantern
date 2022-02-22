@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
     var lightOnOf = true
     var count = 0
     
