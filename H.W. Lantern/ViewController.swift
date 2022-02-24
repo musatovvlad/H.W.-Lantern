@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -34,6 +35,19 @@ class ViewController: UIViewController {
         count += 1
         if count > 2 {
             count = 0
+        }
+    }
+    // Torch
+    @IBAction func torchPressed(_ sender: AnyObject) {
+        let device = AVCaptureDevice.default(for: AVMediaType.video)
+        if ((device?.hasTorch) != nil) {
+            do{
+                try device?.lockForConfiguration()
+                device?.torchMode = device?.torchMode == AVCaptureDevice.TorchMode.on ? .off : .on
+                device?.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
         }
     }
     

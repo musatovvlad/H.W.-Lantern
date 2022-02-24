@@ -24,12 +24,28 @@
                                     <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlT-hE-JTm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-qp-buE">
+                                <rect key="frame" x="256" y="806" width="113" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="torch ON/OFF">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.73021199412475568" green="0.66806556154972807" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="torchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVa-0M-SVr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="SLb-qp-buE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-45" id="3Dp-Ql-sGC"/>
                             <constraint firstItem="ulr-sQ-0JG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gyp-ri-1wJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SLb-qp-buE" secondAttribute="bottom" constant="25" id="HIs-SM-MQq"/>
                             <constraint firstItem="ulr-sQ-0JG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nwr-2A-MN3"/>
+                            <constraint firstItem="SLb-qp-buE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="POt-NK-qtR"/>
                             <constraint firstItem="ulr-sQ-0JG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hgT-BI-JJZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ulr-sQ-0JG" secondAttribute="trailing" id="mSF-hW-gjT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ulr-sQ-0JG" secondAttribute="bottom" id="quO-nu-r89"/>
@@ -48,6 +64,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
